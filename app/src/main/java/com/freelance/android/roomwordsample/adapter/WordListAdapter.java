@@ -62,6 +62,11 @@ public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordVi
         return 0;
     }
 
+    public void setWords(List<Word> words) {
+        mWords = words;
+        notifyDataSetChanged();
+    }
+
     class WordViewHolder extends RecyclerView.ViewHolder{
 
         final private String LOG_TAG = WordViewHolder.class.getName();
